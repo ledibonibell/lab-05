@@ -27,7 +27,7 @@ jobs:
     run: cmake --build _build
 
   - name: Run tests
-    run: |
+    run:
       build/check
 #      cmake --build _build --target test -- ARGS=--verbose
 
