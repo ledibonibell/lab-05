@@ -29,7 +29,7 @@ jobs:
   - name: Run tests
     run: |
       build/check
-      cmake --build _build --target test -- ARGS=--verbose
+#      cmake --build _build --target test -- ARGS=--verbose
 
   - name: Do lcov stuff
     run: lcov -c -d build/CMakeFiles/banking.dir/banking/ --include *.cpp --output-file ./coverage/lcov.info
