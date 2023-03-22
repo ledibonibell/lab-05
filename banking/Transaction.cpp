@@ -47,7 +47,7 @@ void Transaction::Credit(Account& accout, int sum) {
   assert(sum > 0);
   accout.ChangeBalance(sum);
 }
-
+/*
 bool Transaction::Debit(Account& accout, int sum) {
   assert(sum > 0);
   if (accout.GetBalance() > sum) {
@@ -56,7 +56,7 @@ bool Transaction::Debit(Account& accout, int sum) {
   }
   return false;
 }
-
+*/
 void Transaction::SaveToDataBase(Account& from, Account& to, int sum) {
   std::cout << from.id() << " send to " << to.id() << " $" << sum << std::endl;
   std::cout << "Balance " << from.id() << " is " << from.GetBalance()
