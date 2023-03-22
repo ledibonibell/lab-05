@@ -52,9 +52,9 @@ void Transaction::Debit(Account& accout, int sum) {
   assert(sum > 0);
   if (accout.GetBalance() > sum) {
     accout.ChangeBalance(-sum);
-    //return true;
+    return true;
   }
-  //return false;
+  return false;
 }
 
 void Transaction::SaveToDataBase(Account& from, Account& to, int sum) {
