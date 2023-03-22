@@ -48,10 +48,10 @@ void Transaction::Credit(Account& accout, int sum) {
   accout.ChangeBalance(sum);
 }
 
-bool Transaction::Debit(Account& accout, int sum) {
+void Transaction::Debit(Account& accout, int sum) {
   assert(sum > 0);
   if (accout.GetBalance() > sum) {
-    accout.ChangeBalance(sum);
+    accout.ChangeBalance(-sum);
     //return true;
   }
   //return false;
